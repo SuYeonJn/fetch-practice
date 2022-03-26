@@ -27,11 +27,7 @@
     nightDayHandler(this);
   "
     />
-    <ol>
-      <li><a onclick="fetchfile('html')">HTML</a></li>
-      <li><a onclick="fetchfile('css')">CSS</a></li>
-      <li><a onclick="fetchfile('js')">JavaScript</a></li>
-    </ol>
+    <ol class="nav"></ol>
     <article></article>
   </body>
   <script>
@@ -42,5 +38,11 @@
         });
       });
     }
+
+    fetch("list").then(function (res) {
+      res.text().then(function (text) {
+        document.querySelector(".nav").innerHTML = text;
+      });
+    });
   </script>
 </html>
