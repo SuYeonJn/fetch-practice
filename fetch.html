@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p class="test"></p>
+    <input
+      type="button"
+      value="fetch"
+      onclick="
+      /*
+            fetch('css').then(function/익명함수/(res){
+                res.text().then(function(text){
+                    document.querySelector('.test').innerHTML=text;
+                })
+            })
+        */
+
+        //Asynchronous
+       
+        fetch('css').then( function (res){
+            console.log(res.text);
+        });
+        console.log(1);
+        console.log(2);
+        "
+    />
+  </body>
+</html>
